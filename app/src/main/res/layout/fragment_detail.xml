@@ -23,11 +23,10 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_weight="2"
                 android:id="@+id/subjectTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Envio de calificaciones finales" />
+                android:layout_weight="2" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,8 +45,7 @@
                 android:id="@+id/senderTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="facitec@gmail.com" />
+                android:layout_weight="2" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -66,8 +64,7 @@
                 android:id="@+id/messageTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="facitec@gmail.com" />
+                android:layout_weight="2" />
         </LinearLayout>
     </LinearLayout>
 

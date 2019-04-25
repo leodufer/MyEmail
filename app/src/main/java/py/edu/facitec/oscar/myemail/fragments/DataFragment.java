@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -31,6 +32,13 @@ public class DataFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_data, container, false);
         emailListView = view.findViewById(R.id.emailListView);
+        emailListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Email e = (Email) parent.getAdapter().getItem(position);
+                mListener.onFragmentInteraction(e);
+            }
+        });
 
         ArrayAdapter<Email> adapter = new ArrayAdapter<>(getActivity(),android.R.layout.simple_list_item_1, Util.getDummyData());
         emailListView.setAdapter(adapter);

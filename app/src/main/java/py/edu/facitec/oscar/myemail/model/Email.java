@@ -1,12 +1,14 @@
 package py.edu.facitec.oscar.myemail.model;
 
-public class Email {
+import java.io.Serializable;
+
+public class Email implements Serializable {
     private String subject;
     private String sender;
     private String message;
     private String color;
 
-    public Email(String subject, String sender, String message) {
+    public Email(String subject,  String message, String sender) {
         this.subject = subject;
         this.sender = sender;
         this.message = message;
