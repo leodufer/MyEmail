@@ -2,6 +2,8 @@ package py.edu.facitec.oscar.myemail.model;
 
 import java.io.Serializable;
 
+import py.edu.facitec.oscar.myemail.Util;
+
 public class Email implements Serializable {
     private String subject;
     private String sender;
@@ -12,6 +14,7 @@ public class Email implements Serializable {
         this.subject = subject;
         this.sender = sender;
         this.message = message;
+        this.color = "#"+Util.getRandomColor();
     }
 
     public String getSubject() {

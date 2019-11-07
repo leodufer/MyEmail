@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import py.edu.facitec.oscar.myemail.EmailAdapter;
 import py.edu.facitec.oscar.myemail.R;
 import py.edu.facitec.oscar.myemail.Util;
 import py.edu.facitec.oscar.myemail.model.Email;
@@ -40,7 +41,8 @@ public class DataFragment extends Fragment {
             }
         });
 
-        ArrayAdapter<Email> adapter = new ArrayAdapter<>(getActivity(),android.R.layout.simple_list_item_1, Util.getDummyData());
+       // ArrayAdapter<Email> adapter = new ArrayAdapter<>(getActivity(),android.R.layout.simple_list_item_1, Util.getDummyData());
+        EmailAdapter adapter = new EmailAdapter(getActivity(),Util.getDummyData());
         emailListView.setAdapter(adapter);
         return view;
     }

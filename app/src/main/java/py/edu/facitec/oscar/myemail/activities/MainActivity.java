@@ -2,6 +2,7 @@ package py.edu.facitec.oscar.myemail.activities;
 
 import android.app.Fragment;
 import android.content.Intent;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
